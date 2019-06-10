@@ -1,4 +1,5 @@
 import React from 'react';
+import constants from './utils/constants';
 
 class BerlinClock extends React.Component {
 
@@ -8,7 +9,7 @@ class BerlinClock extends React.Component {
 
   updateClock(time){
     if(!this.isValidTime(time))
-        return "Invalid time";
+        return constants.INVALID_TIME_MESSAGE;
   }
 
   render() {
