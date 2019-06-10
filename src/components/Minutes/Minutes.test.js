@@ -65,5 +65,17 @@ describe('Berlin Clock', function(){
             expect(minutes.bottomMinutes()).toBe('YYYY');
         });
 
+        it('at 12:35:00 should have all the lamps to be OOOO', () => {
+            let time = '12:35:00';
+            const [h, m, s] = time.split(":");
+            const props = {
+                minutes: m
+            }
+
+            minutes = setup(props);
+
+            expect(minutes.bottomMinutes()).toBe('OOOO');
+        });
+
     });
 });
