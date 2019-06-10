@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import constants from './utils/constants';
+import Minutes from './components/Minutes/Minutes';
 import { isValidTime } from './utils/clockUtils';
 
 class BerlinClock extends React.Component {
@@ -39,8 +40,8 @@ class BerlinClock extends React.Component {
 
   render() {
     return (
-      <div>
-
+      <div className="berlinClock">
+        <Minutes minutes = {this.state.minutes}/>
       </div>
     );
   }
