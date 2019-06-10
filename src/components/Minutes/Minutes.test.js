@@ -19,7 +19,7 @@ describe('Berlin Clock', function(){
 
         it('at 00:00:00 should have all the lamps to be OOOO', () => {
             let time = '00:00:00';
-            const [h, m, s] = time.split("");
+            const [h, m, s] = time.split(":");
             const props = {
                 minutes: m
             }
@@ -27,6 +27,18 @@ describe('Berlin Clock', function(){
             minutes = setup(props);
 
             expect(minutes.bottomMinutes()).toBe('OOOO');
+        });
+
+        it('at 23:59:59 should have all the lamps to be YYYY', () => {
+            let time = '23:59:59';
+            const [h, m, s] = time.split(":");
+            const props = {
+                minutes: m
+            }
+
+            minutes = setup(props);
+
+            expect(minutes.bottomMinutes()).toBe('YYYY');
         });
 
     });

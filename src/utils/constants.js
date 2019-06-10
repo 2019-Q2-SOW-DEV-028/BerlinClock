@@ -4,7 +4,8 @@ const constants = {
     TOTAL_BOTTOM_MINUTES_LAMP: 4,
     LAMP_OFF: 'O',
     LAMP_ON_CLASS: 'on',
-    LAMP_OFF_CLASS: 'off'
+    LAMP_OFF_CLASS: 'off',
+    YELLOW_LAMP: 'Y'
 }
 
 export default constants;
