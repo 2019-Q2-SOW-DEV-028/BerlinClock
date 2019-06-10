@@ -23,4 +23,15 @@ describe('Berlin clock', function(){
     expect(clock.updateClock(time)).toBe('Invalid time');
   });
 
+  it('should accept and set the time if it is a valid time', () => {
+    let time = '22:10:25';
+    wrapper = shallow(<BerlinClock />);
+    clock = wrapper.instance();
+    const spy = jest.spyOn(BerlinClock.prototype, 'setTime');
+    
+    clock.updateClock(time);
+
+    expect(spy).toHaveBeenCalled()
+  });
+
 });
