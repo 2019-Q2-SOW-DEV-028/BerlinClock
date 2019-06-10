@@ -5,7 +5,8 @@ const constants = {
     LAMP_OFF: 'O',
     LAMP_ON_CLASS: 'on',
     LAMP_OFF_CLASS: 'off',
-    YELLOW_LAMP: 'Y'
+    YELLOW_LAMP: 'Y',
+    FIVE: 5
 }
 
 export default constants;
