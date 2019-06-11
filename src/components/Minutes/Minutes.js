@@ -1,6 +1,6 @@
 import React from 'react';
 import constants from '../../utils/constants';
-import { modulo5, getOnOffLamps } from '../../utils/clockUtils';
+import { modulo5, getOnOffLamps, divide5 } from '../../utils/clockUtils';
 
 class Minutes extends React.Component {
 
@@ -9,7 +9,7 @@ class Minutes extends React.Component {
     }
 
     topMinutes() {
-        return getOnOffLamps(constants.TOTAL_TOP_MINUTES_LAMP, Math.floor(this.props.minutes / 5)).replace(/YYY/g, 'YYR');
+        return getOnOffLamps(constants.TOTAL_TOP_MINUTES_LAMP, Math.floor(divide5(this.props.minutes))).replace(/YYY/g, 'YYR');
     }
 
     formLampBlocks(row){

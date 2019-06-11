@@ -8,6 +8,10 @@ export const modulo5 = (number) => {
     return number % constants.FIVE;
 }
 
+export const divide5 = (number) => {
+    return number / constants.FIVE;
+}
+
 export const getOnOffLamps = (totalLamps, lampsOn) => {
     let row = "";
     let lampsOff = totalLamps - lampsOn;
