@@ -8,6 +8,10 @@ class Minutes extends React.Component {
         return getOnOffLamps(constants.TOTAL_BOTTOM_MINUTES_LAMP, modulo5(this.props.minutes));
     }
 
+    topMinutes() {
+        return getOnOffLamps(constants.TOTAL_TOP_MINUTES_LAMP, Math.floor(this.props.minutes / 5));
+    }
+
     formLampBlocks(row){
         if(row){
             let lamps = row.split("");
@@ -21,6 +25,7 @@ class Minutes extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <div className="fiveMinuteRow">{this.formLampBlocks(this.topMinutes())}</div>
                 <div className="oneMinuteRow">{this.formLampBlocks(this.bottomMinutes())}</div>
             </React.Fragment>
         );

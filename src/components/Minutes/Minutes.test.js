@@ -52,4 +52,14 @@ describe('Berlin Clock', function(){
         });
 
     });
+
+    describe('Five minutes row', function(){
+
+        it('at 00:00:00 should have all the lamps to be OOOOOOOOOOO', () => {
+            minutes = setup('00:00:00');
+
+            expect(minutes.topMinutes()).toBe('OOOOOOOOOOO');
+        });
+
+    });
 });
