@@ -45,6 +45,12 @@ describe('Berlin Clock', function(){
             expect(hours.bottomHours()).toBe('RRRO');
         });
 
+        it('at 14:35:00 should have all the lamps to be RRRR', () => {
+            hours = setup('14:35:00');
+            
+            expect(hours.bottomHours()).toBe('RRRR');
+        });
+
     });
 
 });
