@@ -1,10 +1,11 @@
 import React from 'react';
 import constants from '../../utils/constants';
+import { isEven } from '../../utils/clockUtils';
 
 class Seconds extends React.Component {
 
     seconds() {
-        return this.props.seconds % 2 ? constants.LAMP_OFF : constants.YELLOW_LAMP;
+        return isEven(this.props.seconds) ? constants.LAMP_OFF : constants.YELLOW_LAMP;
     }
 
     render() {

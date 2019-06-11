@@ -8,6 +8,10 @@ export const modulo5 = (number) => {
     return number % constants.FIVE;
 }
 
+export const isEven = (number) => {
+    return number % constants.TWO;
+}
+
 export const divide5 = (number) => {
     return number / constants.FIVE;
 }
