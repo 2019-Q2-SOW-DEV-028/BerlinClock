@@ -9,7 +9,7 @@ class Minutes extends React.Component {
     }
 
     topMinutes() {
-        return getOnOffLamps(constants.TOTAL_TOP_MINUTES_LAMP, Math.floor(this.props.minutes / 5));
+        return getOnOffLamps(constants.TOTAL_TOP_MINUTES_LAMP, Math.floor(this.props.minutes / 5)).replace(/YYY/g, 'YYR');
     }
 
     formLampBlocks(row){
