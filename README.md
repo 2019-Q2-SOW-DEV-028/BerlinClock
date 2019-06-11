@@ -12,6 +12,7 @@
 - Quick start
   - [Install](#install)
   - [Usage](#usage)
+  - [Tests](#tests)
 
 ## About this Kata
 
@@ -44,3 +45,16 @@ $ npm start
 ```
 
 This opens the browser and runs the application in http://localhost:3000/
+
+## Tests
+
+To run test and see coverage
+
+```bash
+$ npm test
+```
+
+```bash
+$ npm run test:coverage
+```
+
