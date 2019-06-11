@@ -53,4 +53,14 @@ describe('Berlin Clock', function(){
 
     });
 
+    describe('Five hours row', function(){
+
+        it('at 00:00:00 should have all the lamps to be OOOO', () => {            
+            hours = setup('00:00:00');
+            
+            expect(hours.bottomHours()).toBe('OOOO');
+        });
+
+    });
+
 });

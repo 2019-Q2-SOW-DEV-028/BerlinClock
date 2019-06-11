@@ -42,7 +42,7 @@ class BerlinClock extends React.Component {
   render() {
     return (
       <div className="berlinClock">
-        <Hours ref={this.hours} hours = {this.state.hours}/>
+        <Hours hours = {this.state.hours}/>
         <Minutes minutes = {this.state.minutes}/>
       </div>
     );
