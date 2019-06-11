@@ -27,6 +27,12 @@ describe('Berlin Clock', function(){
             expect(seconds.seconds()).toBe('Y');
         });
 
+        it('at 23:59:59 should have all the lamps to be O', () => {
+            seconds = setup('23:59:59');
+            
+            expect(seconds.seconds()).toBe('O');
+        });
+
     });
 
 });
