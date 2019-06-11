@@ -20,7 +20,7 @@ class BerlinClock extends React.Component {
   updateClock(time){
     if(!isValidTime(time))
         return constants.INVALID_TIME_MESSAGE;
-    const [hours, minutes, seconds] = time ? time.split(':') : moment().format('H:m:s').split(':');
+    const [hours, minutes, seconds] = time.split(':');
     this.setTime(hours, minutes, seconds);
   }
 
